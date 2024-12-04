@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="天堂之城 - 探索艺术与文化的无限可能">
+  <title>天堂之城 - 文创艺术</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  
+  <!-- 外部样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="nav-bar" id="navbar">
+      <div class="container mx-auto px-6">
+          <div class="flex items-center justify-between">
+              <a href="#" class="text-2xl font-bold">天堂之城</a>
+              <div class="flex items-center space-x-8">
+                  <a href="#home" class="nav-link">首页</a>
+                  <a href="#features" class="nav-link">特色</a>
+                  <a href="#gallery" class="nav-link">艺术廊</a>
+                  <a href="#about" class="nav-link">关于</a>
+                  <div class="user-menu">
+                      <button class="flex items-center gap-2" id="userButton">
+                          <i class="fas fa-user"></i>
+                          <span id="userName">登录</span>
+                      </button>
+                      <div class="user-dropdown">
+                          <!-- 动态填充用户菜单 -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+  <!-- 头部区域 -->
+  <header class="parallax-header" id="home">
+      <div class="parallax-overlay"></div>
+      <div class="header-content">
+          <h1 class="text-5xl font-bold mb-4">天堂之城</h1>
+          <p class="text-xl mb-8">探索艺术与文化的无限可能</p>
+          <button class="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
+              开启探索
+          </button>
+      </div>
+  </header>
+
+  <!-- 特色区域 -->
+  <section id="features" class="py-20">
+      <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">特色亮点</h2>
+          <div class="features-grid">
+              <div class="feature-card">
+                  <i class="fas fa-paint-brush text-4xl mb-4 text-primary"></i>
+                  <h3 class="text-xl font-bold mb-4">艺术创作</h3>
+                  <p>探索无限创意可能，让艺术激发灵感</p>
+              </div>
+              <div class="feature-card">
+                  <i class="fas fa-theater-masks text-4xl mb-4 text-primary"></i>
+                  <h3 class="text-xl font-bold mb-4">文化传承</h3>
+                  <p>传承历史文化精髓，连接过去与未来</p>
+              </div>
+              <div class="feature-card">
+                  <i class="fas fa-users text-4xl mb-4 text-primary"></i>
+                  <h3 class="text-xl font-bold mb-4">社区互动</h3>
+                  <p>建立艺术家社区，分享创作与灵感</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- 艺术展示区 -->
+  <section id="gallery" class="py-20 bg-secondary bg-opacity-5">
+      <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">艺术展示</h2>
+          <div class="art-gallery" id="artGallery">
+              <!-- 动态填充艺术作品 -->
+          </div>
+      </div>
+  </section>
+
+  <!-- 登录模态框 -->
+  <div class="modal" id="loginModal">
+      <div class="modal-content">
+          <h3 class="text-2xl font-bold mb-6">用户登录</h3>
+          <form id="loginForm" class="space-y-4">
+              <div>
+                  <label class="block text-sm font-medium mb-2">用户名</label>
+                  <input type="text" name="username" class="w-full p-3 border rounded-lg">
+              </div>
+              <div>
+                  <label class="block text-sm font-medium mb-2">密码</label>
+                  <input type="password" name="password" class="w-full p-3 border rounded-lg">
+              </div>
+              <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-opacity-90">
+                  登录
+              </button>
+          </form>
+      </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="bg-secondary text-white py-12">
+      <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                  <h4 class="text-xl font-bold mb-4">天堂之城</h4>
+                  <p>探索艺术与文化的无限可能</p>
+              </div>
+              <div>
+                  <h4 class="text-xl font-bold mb-4">联系我们</h4>
+                  <p>邮箱：contact@paradise-city.com</p>
+                  <p>电话：(+86) 123-4567-8900</p>
+              </div>
+              <div>
+                  <h4 class="text-xl font-bold mb-4">关注我们</h4>
+                  <div class="flex space-x-4">
+                      <a href="#" class="hover:text-primary"><i class="fab fa-weixin"></i></a>
+                      <a href="#" class="hover:text-primary"><i class="fab fa-weibo"></i></a>
+                      <a href="#" class="hover:text-primary"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+              <p>&copy; 2024 天堂之城. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+
+  <!-- 脚本 -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

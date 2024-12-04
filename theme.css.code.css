@@ -1,0 +1,36 @@
+/* 主题变量 */
+:root {
+  --color-primary: #8B2232;
+  --color-secondary: #24426C;
+  --color-accent: #C6A063;
+  --color-success: #48BB78;
+  --color-warning: #F6AD55;
+  --color-error: #F56565;
+  --color-info: #4299E1;
+  --text-primary: #2C3E50;
+  --text-secondary: #4A5568;
+  --bg-primary: #F5F6F8;
+  --bg-secondary: #FFFFFF;
+  --border-color: #E2E8F0;
+  --header-height: 70vh;
+  --transition-speed: 0.3s;
+}
+
+/* 深色主题 */
+[data-theme="dark"] {
+  --color-primary: #FF4D6D;
+  --color-secondary: #4A90E2;
+  --color-accent: #E6C687;
+  --text-primary: #E1E1E1;
+  --text-secondary: #A0AEC0;
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #2D2D2D;
+  --border-color: #4A5568;
+}
+
+/* 主题切换过渡效果 */
+* {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+}
